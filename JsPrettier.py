@@ -89,7 +89,7 @@ def get_project_setting(key):
     :return: The project setting value.
     :rtype: str
     """
-    project_settings = sublime.active_window().active_view().settings()
+    project_settings = sublime.active_window().project_data()
     if not project_settings:
         return None
     js_prettier_settings = project_settings.get(PROJECT_SETTINGS_KEY)
